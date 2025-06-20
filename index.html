@@ -48,28 +48,28 @@
     function sumar() {
       let n1 = parseFloat(document.getElementById("num1").value);
       let n2 = parseFloat(document.getElementById("num2").value);
-      document.getElementById("resultado").innerText = "Resultado: " + (n1 + n2);
+      document.getElementById("resultado").textContent = "Resultado: " + (n1 + n2);
     }
 
     function restar() {
       let n1 = parseFloat(document.getElementById("num1").value);
       let n2 = parseFloat(document.getElementById("num2").value);
-      document.getElementById("resultado").innerText = "Resultado: " + (n1 - n2);
+      document.getElementById("resultado").textContent = "Resultado: " + (n1 - n2);
     }
 
     function multiplicar() {
       let n1 = parseFloat(document.getElementById("num1").value);
       let n2 = parseFloat(document.getElementById("num2").value);
-      document.getElementById("resultado").innerText = "Resultado: " + (n1 * n2);
+      document.getElementById("resultado").textContent = "Resultado: " + (n1 * n2);
     }
 
     function dividir() {
       let n1 = parseFloat(document.getElementById("num1").value);
       let n2 = parseFloat(document.getElementById("num2").value);
       if (n2 === 0) {
-        document.getElementById("resultado").innerText = "Error: No se puede dividir entre cero.";
+        document.getElementById("resultado").textContent = "Error: No se puede dividir entre cero.";
       } else {
-        document.getElementById("resultado").innerText = "Resultado: " + (n1 / n2);
+        document.getElementById("resultado").textContent = "Resultado: " + (n1 / n2);
       }
     }
   </script>
