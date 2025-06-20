@@ -1,61 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Act2.2</title>
-  <style>
-    body {
-          text-align: center;
-      font-family: Arial, sans-serif;
-      margin-top: 50px;
-    }
-
-    .circle {
-      width: 150px;
-      height: 150px;
-      border: 2px solid black;
-      border-radius: 50%;
-      margin: 0 auto 30px auto;
-      background-color: white;
-      transition: background-color 0.3s;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .buttons button {
-      background-color: #0d4d66;
-      color: white;
-     
-      padding: 15px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      width: 80px;
-    }
-
-   
-
-  </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sumar dos numeros</title>
 </head>
 <body>
+<h1>Sumar dos numeros enteros</h1>
+<form action="" id="suma-form">
+	<label for="num1">Numero 1:</label>
+	<input type="number" id="num1" name="num1"><br><br>
 
-  <div class="circle" id="circle"></div>
+	<label for="num2">Numero 2:</label>
+	<input type="number" id="num2" name="num2"><br><br>
 
-  <div class="buttons">
-    <button onclick="cambiarColor('red')">rojo</button>
-    <button onclick="cambiarColor('blue')">azul</button>
-    <button onclick="cambiarColor('green')">verde</button>
-    <button onclick="cambiarColor('brown')">cafe</button>
-  </div>
+<button type="button" onclick="sumarNumeros()">Sumar</button>
+<br><br>
+<p id="resultado">Resultado: </p>
+</form>
+<script>
+	function sumarNumeros(){
+		//Obtener los valores de los campos de entrada
+		var num1 = parseFloat(document.getElementById("num1").value);
+var num2= parseFloat(document.getElementById("num2").value);
 
-  <script>
-    function cambiarColor(color) {
-      document.getElementById("circle").style.backgroundColor = color;
-    }
-  </script>
+//verificar si los valores son numericos
+if (isNaN(num1) || isNaN(num2)) {
+	document.getElementById("resultado").textContent = "Por favor,  ingrese numeros validos.";return;
+	}
+	//Realizar la suma
+	var suma = num1 + num2;
 
+	//Mostrar el resultado
+	document.getElementById("resultado").textContent="resultado: " + suma;
+}
+</script>
 </body>
 </html>
